@@ -1,2 +1,4 @@
 # TownHall
-A 
+A Social Media app written using React/Redux and Express.
+
+
