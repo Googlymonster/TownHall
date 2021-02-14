@@ -53,7 +53,7 @@ class PostShout extends Component {
   };
   handleClose = () => {
     this.props.clearErrors();
-    this.setState({ open: false, errors: {} });
+    this.setState({ open: false, errors: {}, body: "" });
   };
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
@@ -61,7 +61,7 @@ class PostShout extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.postShout({ body: this.state.body });
-    this.setState({ open: false });
+    this.handleClose();
   };
   render() {
     const { errors } = this.state;

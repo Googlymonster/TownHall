@@ -25,7 +25,7 @@ class Comments extends Component {
     const { comments, classes } = this.props;
     const commentBody = comments ? (
       comments.map((comment, index) => {
-        const { body, createdAt, userImage, userHandle } = comments;
+        const { body, createdAt, userImage, userHandle } = comment;
         return (
           <Grid container>
             <Fragment key={createdAt}>
@@ -67,7 +67,9 @@ class Comments extends Component {
     ) : (
       <Grid container>
         <Grid item sm={3}>
-          <Typography variant="body2">No Comments</Typography>
+          <Typography variant="body2" align="center">
+            Loading Comments
+          </Typography>
         </Grid>
       </Grid>
     );

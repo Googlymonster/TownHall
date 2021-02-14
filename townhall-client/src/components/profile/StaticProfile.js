@@ -58,7 +58,7 @@ const StaticProfile = (props) => {
             </Fragment>
           )}
           <CalendarToday color="primary" />{" "}
-          <spam>Joined {dayjs(createdAt).format("MMM YYYY")}</spam>
+          <span>Joined {dayjs(createdAt).format("MMM YYYY")}</span>
         </div>
       </div>
     </Paper>

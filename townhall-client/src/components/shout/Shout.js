@@ -61,7 +61,7 @@ class Shout extends Component {
     return (
       <Card className={classes.card}>
         <CardMedia
-          src={userImage}
+          image={userImage}
           title="Profile Image"
           className={classes.image}
         />

@@ -16,8 +16,8 @@ import IconButton from "@material-ui/core/IconButton";
 import LocationOn from "@material-ui/icons/LocationOn";
 import LinkIcon from "@material-ui/icons/Link";
 import CalendarToday from "@material-ui/icons/CalendarToday";
-import EditIcon from "@material-ui/icons/Edit";
-import KeyboardReturn from "@material-ui/icons/KeyboardReturn";
+import CloudUpload from "@material-ui/icons/CloudUpload";
+import ExitToApp from "@material-ui/icons/ExitToApp";
 // Redux
 import { connect } from "react-redux";
 import { logoutUser, uploadImage } from "../../redux/actions/userActions";
@@ -69,7 +69,7 @@ class Profile extends Component {
                 onChange={this.handleImageChange}
               />
               <IconButton onClick={this.handleEditPicture} className="button">
-                <EditIcon color="primary"></EditIcon>
+                <CloudUpload color="primary"></CloudUpload>
               </IconButton>
             </div>
             <hr />
@@ -106,7 +106,7 @@ class Profile extends Component {
               <span>Joined {dayjs(createdAt).format("MMM YYYY")}</span>
             </div>
             <MyButton tip="Logout" onClick={this.handleLogout}>
-              <KeyboardReturn color="primary" />
+              <ExitToApp color="primary" />
             </MyButton>
             <EditDetails />
           </div>

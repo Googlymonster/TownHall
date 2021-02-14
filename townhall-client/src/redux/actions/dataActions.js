@@ -117,7 +117,7 @@ export const submitComment = (shoutId, commentData) => (dispatch) => {
 export const deleteShout = (shoutId) => (dispatch) => {
   axios
     .delete(`/shout/${shoutId}`)
-    .then((res) => {
+    .then(() => {
       dispatch({
         type: DELETE_SHOUT,
         payload: shoutId,

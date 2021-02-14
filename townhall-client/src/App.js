@@ -7,7 +7,7 @@ import jwtDecode from "jwt-decode";
 // Redux
 import { Provider } from "react-redux";
 import store from "./redux/store";
-import { SET_AUTHENTICATED, SET_UNAUTHENTICATED } from "./redux/types";
+import { SET_AUTHENTICATED } from "./redux/types";
 import { logoutUser, getUserData } from "./redux/actions/userActions";
 // Components
 import Navbar from "./components/layout/Navbar";
@@ -33,12 +33,11 @@ if (token) {
     window.location.href = "/login";
   } else {
     store.dispatch({ type: SET_AUTHENTICATED });
-    axios.defaults.headers.common["Authrization"] = token;
+    axios.defaults.headers.common["Authorization"] = token;
     store.dispatch(getUserData());
   }
 } else {
   store.dispatch(logoutUser());
-  // store.dispatch({ type: SET_UNAUTHENTICATED });
 }
 class App extends Component {
   render() {
